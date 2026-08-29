@@ -1,13 +1,8 @@
 name: Validate Changelog
 
 on:
-  pull_request:
+  push:
     branches: [main]
-    paths:
-      - "docs/changelog-entries/**"
-      - "docs/changelog.mdx"
-      - "docs/scripts/build-changelog.mjs"
-
 jobs:
   validate:
     runs-on: ubuntu-latest
