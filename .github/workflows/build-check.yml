@@ -15,18 +15,6 @@ on:
       - "turbo.json"
       - "tsconfig.json"
       - ".github/workflows/build-check.yml"
-  pull_request:
-    branches: [main]
-    paths:
-      - "apps/web/**"
-      - "packages/**"
-      - "package.json"
-      - "pnpm-lock.yaml"
-      - "pnpm-workspace.yaml"
-      - "turbo.json"
-      - "tsconfig.json"
-      - ".github/workflows/build-check.yml"
-
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
